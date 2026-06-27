@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aeroport AI — Ma'lumotlarni o'chirish / Data Deletion</title>
+<style>
+  :root{
+    --bg:#07111F; --bg2:#0B1730; --card:#101E3A;
+    --blue:#1E6BFF; --cyan:#00D4FF; --line:rgba(30,107,255,.18);
+    --t1:#FFFFFF; --t2:#B0BEC5;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+    background:linear-gradient(160deg,var(--bg),var(--bg2));
+    color:var(--t1); line-height:1.7; min-height:100vh; padding:24px 16px;
+  }
+  .wrap{max-width:780px;margin:0 auto}
+  .head{
+    background:linear-gradient(120deg,var(--blue),var(--cyan));
+    border-radius:20px; padding:32px 28px; margin-bottom:24px;
+    position:relative; overflow:hidden;
+  }
+  .head::after{content:"🗑";position:absolute;right:6px;top:-10px;font-size:120px;opacity:.12}
+  .head h1{font-size:24px;font-weight:800;margin-bottom:6px}
+  .head p{opacity:.92;font-size:14px}
+  .langs{display:flex;gap:8px;margin-bottom:24px;flex-wrap:wrap}
+  .langs button{
+    background:var(--card);color:var(--t2);border:1px solid var(--line);
+    padding:9px 18px;border-radius:12px;font-size:14px;font-weight:600;cursor:pointer;transition:.2s;
+  }
+  .langs button.active{background:var(--blue);color:#fff;border-color:var(--blue)}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;margin-bottom:16px}
+  h2{font-size:18px;font-weight:700;margin-bottom:12px;color:var(--cyan)}
+  p{color:var(--t2);margin-bottom:10px;font-size:15px}
+  ol,ul{margin:10px 0 10px 22px;color:var(--t2);font-size:15px}
+  li{margin-bottom:8px}
+  strong{color:var(--t1)}
+  a{color:var(--cyan)}
+  .foot{text-align:center;color:var(--t2);font-size:13px;margin-top:24px;opacity:.7}
+  .lang{display:none}.lang.show{display:block}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="head">
+    <h1>Aeroport AI</h1>
+    <p id="subtitle">Ma'lumotlarni o'chirish</p>
+  </div>
+
+  <div class="langs">
+    <button onclick="setLang('uz',this)" class="active">O'zbek</button>
+    <button onclick="setLang('ru',this)">Русский</button>
+    <button onclick="setLang('en',this)">English</button>
+  </div>
+
+  <!-- UZBEK -->
+  <div class="lang show" data-lang="uz">
+    <div class="card">
+      <h2>Ma'lumotlaringizni o'chirish</h2>
+      <p><strong>Aeroport AI</strong> ilovasi (dasturchi: Javohir Qurbonaliyev) foydalanuvchi ma'lumotlarini (ism, telefon, reys eslatmalari, sozlamalar, qidiruv tarixi) faqat sizning qurilmangizda saqlaydi. Serverda doimiy saqlanmaydi.</p>
+    </div>
+    <div class="card">
+      <h2>Qanday o'chirish mumkin</h2>
+      <ol>
+        <li><strong>Ilova ichida:</strong> Profil yoki Sozlamalar bo'limiga kiring va ma'lumotlaringizni (profil, eslatmalar, qidiruv tarixi) o'chiring.</li>
+        <li><strong>To'liq o'chirish:</strong> Ilovani qurilmangizdan o'chirib tashlasangiz (uninstall), unga tegishli BARCHA ma'lumotlar butunlay o'chiriladi.</li>
+        <li><strong>So'rov yuborish:</strong> Qo'shimcha yordam kerak bo'lsa, quyidagi email orqali murojaat qiling — biz so'rovingizni 7 ish kuni ichida ko'rib chiqamiz.</li>
+      </ol>
+    </div>
+    <div class="card">
+      <h2>Qaysi ma'lumotlar o'chiriladi</h2>
+      <p>Profil (ism, telefon), reys eslatmalari, sozlamalar (til, ko'rinish rejimi), qidiruv tarixi — barchasi qurilmadan o'chiriladi. Bu ma'lumotlar serverda saqlanmagani uchun, ilova o'chirilishi bilan butunlay yo'qoladi.</p>
+    </div>
+    <div class="card">
+      <h2>Bog'lanish</h2>
+      <p>Ma'lumot o'chirish bo'yicha: <a href="mailto:markhaboakhunova2@gmail.com">markhaboakhunova2@gmail.com</a></p>
+    </div>
+  </div>
+
+  <!-- RUSSIAN -->
+  <div class="lang" data-lang="ru">
+    <div class="card">
+      <h2>Удаление ваших данных</h2>
+      <p>Приложение <strong>Aeroport AI</strong> (разработчик: Javohir Qurbonaliyev) хранит пользовательские данные (имя, телефон, напоминания о рейсах, настройки, историю поиска) только на вашем устройстве. На сервере постоянно не хранятся.</p>
+    </div>
+    <div class="card">
+      <h2>Как удалить</h2>
+      <ol>
+        <li><strong>В приложении:</strong> откройте раздел Профиль или Настройки и удалите свои данные (профиль, напоминания, историю поиска).</li>
+        <li><strong>Полное удаление:</strong> при удалении приложения с устройства (uninstall) ВСЕ связанные с ним данные полностью стираются.</li>
+        <li><strong>Запрос:</strong> если нужна дополнительная помощь, напишите на email ниже — мы рассмотрим запрос в течение 7 рабочих дней.</li>
+      </ol>
+    </div>
+    <div class="card">
+      <h2>Какие данные удаляются</h2>
+      <p>Профиль (имя, телефон), напоминания о рейсах, настройки (язык, тема), история поиска — всё удаляется с устройства. Поскольку эти данные не хранятся на сервере, они полностью исчезают при удалении приложения.</p>
+    </div>
+    <div class="card">
+      <h2>Контакт</h2>
+      <p>По вопросам удаления данных: <a href="mailto:markhaboakhunova2@gmail.com">markhaboakhunova2@gmail.com</a></p>
+    </div>
+  </div>
+
+  <!-- ENGLISH -->
+  <div class="lang" data-lang="en">
+    <div class="card">
+      <h2>Deleting your data</h2>
+      <p>The <strong>Aeroport AI</strong> app (developer: Javohir Qurbonaliyev) stores user data (name, phone, flight reminders, settings, search history) only on your device. It is not permanently stored on a server.</p>
+    </div>
+    <div class="card">
+      <h2>How to delete</h2>
+      <ol>
+        <li><strong>In the app:</strong> open the Profile or Settings section and delete your data (profile, reminders, search history).</li>
+        <li><strong>Full deletion:</strong> uninstalling the app from your device permanently erases ALL data associated with it.</li>
+        <li><strong>Request:</strong> if you need further help, email us below — we will review your request within 7 business days.</li>
+      </ol>
+    </div>
+    <div class="card">
+      <h2>What data is deleted</h2>
+      <p>Profile (name, phone), flight reminders, settings (language, theme), search history — all erased from the device. Since this data is not stored on a server, it disappears completely when the app is uninstalled.</p>
+    </div>
+    <div class="card">
+      <h2>Contact</h2>
+      <p>For data deletion requests: <a href="mailto:markhaboakhunova2@gmail.com">markhaboakhunova2@gmail.com</a></p>
+    </div>
+  </div>
+
+  <div class="foot">© 2026 Aeroport AI</div>
+</div>
+<script>
+  var subs={uz:"Ma'lumotlarni o'chirish",ru:"Удаление данных",en:"Data Deletion"};
+  function setLang(l,btn){
+    document.querySelectorAll('.lang').forEach(e=>e.classList.remove('show'));
+    document.querySelector('.lang[data-lang="'+l+'"]').classList.add('show');
+    document.querySelectorAll('.langs button').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('subtitle').textContent=subs[l];
+    document.documentElement.lang=l;
+  }
+</script>
+</body>
+</html>
